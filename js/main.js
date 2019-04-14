@@ -43,7 +43,14 @@ var catsArray = [{
 var vueApp = new Vue({
     el: "#catList",
     data: {
-      cats: catsArray
+      cats: catsArray,
+      nameInput: "",
+      ageInput: "",
+      colorInput: "",
+      fluffInput: "",
+      ownerInput: "",
+      pictureInput: "",
+      idInput: ""
     },
     methods: {
         deleteCat: function(catObject){
@@ -51,9 +58,22 @@ var vueApp = new Vue({
                 if (favs.id !== catObject.id) {
                     return true;
                 } else {
-                    return false}
+                    return false;
                 }
-            )
+            })
+            
+        },
+        addCat: function(){
+            let newCat = {
+                name: this.nameInput,
+                age: this.ageInput,
+                color: this.colorInput,
+                fluffLevel: this.fluffInput,
+                owner: this.ownerInput,
+                picture: this.pictureInput,
+                id: this.idInput
+            };
+            this.cats.push(newCat);
         }
     }
   });
