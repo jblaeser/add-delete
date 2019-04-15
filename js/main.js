@@ -74,6 +74,7 @@ var vueApp = new Vue({
                 id: this.idInput
             };
             this.cats.push(newCat);
+            this.nameInput = this.ageInput = this.colorInput = this.fluffInput = this.ownerInput = this.pictureInput = this.idInput = "";
         }
     }
   });

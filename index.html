@@ -43,6 +43,28 @@
         </tr>
       </tbody>
     </table>
+    <form v-on:submit.prevent="addCat">
+      <h3>Add A New Cat!</h3>
+      <label>Name: <input type="text" v-model="nameInput"></label>
+      <label>Age: <input type="text" v-model="ageInput"></label>
+      <label>Color: <input type="text" v-model="colorInput"></label>
+      <label>Fluff Level:
+        <select name="fluffselect" id="fluff-select" v-model.number="fluffInput">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+      <label>Who owns this cat?: <input type="text" v-model="ownerInput"></label>
+      <label>Picture (must be URL link to picture): <input type="text" v-model="pictureInput"></label>
+      <label>ID: <input type="text" v-model="idInput"></label>
+      <button type="submit">Add This Cat!</button>
+
+
+
+    </form>
   </div>
   <aside class="key">
     <div class="keyline">
