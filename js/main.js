@@ -75,6 +75,9 @@ var vueApp = new Vue({
             };
             this.cats.push(newCat);
             this.nameInput = this.ageInput = this.colorInput = this.fluffInput = this.ownerInput = this.pictureInput = this.idInput = "";
-        }
+            if (this.pictureInput === "") {
+                newCat.picture = "img/placeholdercat.jpg";
+            };
+        },
     }
   });

@@ -60,7 +60,7 @@
       <label>Who owns this cat?: <input type="text" v-model="ownerInput"></label>
       <label>Picture (must be URL link to picture): <input type="text" v-model="pictureInput"></label>
       <label>ID: <input type="text" v-model="idInput"></label>
-      <button type="submit">Add This Cat!</button>
+      <button type="submit" v-bind:disabled="!nameInput || !ageInput || !colorInput || !fluffInput || !ownerInput || !idInput">Add This Cat!</button>
 
 
 

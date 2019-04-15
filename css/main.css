@@ -185,6 +185,27 @@ table img {
     max-width: 20%;
 }
 
+form {
+    max-width: 50%; 
+    margin: 0 auto;
+    background-color: lightgoldenrodyellow;
+    padding: 1em;
+    border: .25em dashed darkgrey;
+}
+
+label {
+    display: block;
+    padding: .25em;
+}
+
+button {
+    padding: .25em;
+    margin-top: .5em;
+}
+button:hover {
+    color: lightblue;
+    background-color: darkgray;
+}
 
 
 
